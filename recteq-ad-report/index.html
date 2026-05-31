@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recteq Pellet Grill | Meta Ad Research Report</title>
+  <style>
+    :root {
+      --bg: #f6f0e8;
+      --paper: #fffdfa;
+      --ink: #251e19;
+      --muted: #74675e;
+      --line: #dfd4c8;
+      --red: #a53c28;
+      --red-dark: #722719;
+      --green: #356b4e;
+      --amber: #b26b18;
+      --blue: #315f79;
+      --shadow: 0 14px 36px rgba(70, 47, 34, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(165, 60, 40, .12), transparent 30rem),
+        var(--bg);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--red-dark); }
+    .hero {
+      padding: 64px 24px 42px;
+      color: #fffaf4;
+      background: linear-gradient(125deg, #2a1b15, #66291d 72%, #8d3925);
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .eyebrow {
+      margin-bottom: 12px;
+      color: #efc7b4;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(36px, 6vw, 70px); line-height: 1.05; }
+    .subtitle { max-width: 790px; margin: 20px 0 0; color: #f3d9ce; font-size: 18px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .hero-meta span, .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .hero-meta span { border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08); }
+    main { padding: 30px 24px 70px; }
+    .notice {
+      margin-bottom: 22px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--amber);
+      border-radius: 10px;
+      background: #fff5df;
+      color: #684413;
+    }
+    .metrics, .grid { display: grid; gap: 16px; }
+    .metrics { grid-template-columns: repeat(4, 1fr); margin: 22px 0; }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .metric, .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .metric { padding: 18px; }
+    .metric b { display: block; margin-bottom: 5px; color: var(--red); font-size: 25px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .card { padding: 22px; }
+    h2 { margin: 0 0 14px; font-size: 25px; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p { margin: 8px 0; }
+    ul { margin: 10px 0 0; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 16px; }
+    button {
+      cursor: pointer;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      background: #fffaf5;
+      font-weight: 800;
+    }
+    button.is-active { border-color: var(--red); color: white; background: var(--red); }
+    .panel { display: none; }
+    .panel.is-active { display: block; }
+    .pill.confirmed { color: #27563d; background: #dcefe3; }
+    .pill.assumption { color: #75490f; background: #ffecc2; }
+    .pill.validation { color: #315f79; background: #dceefa; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+    .score { color: var(--red); font-weight: 900; }
+    .source-list a { display: block; margin: 8px 0; }
+    footer { padding-top: 24px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 820px) {
+      .metrics, .grid.two { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Meta Creative Intelligence / Single Ad Research</div>
+      <h1>recteq Pellet Grill Meta Ad Report</h1>
+      <p class="subtitle">一条 Meta Ad Library 样本的初版研究页。重点不是假装已经看见全部画面，而是先建立证据边界、产品机制与下一步可执行的验证清单。</p>
+      <div class="hero-meta">
+        <span>Brand: recteq</span>
+        <span>Category: Pellet Grill</span>
+        <span>Sample: Meta Ad Library ID 988547844043415</span>
+        <span>Report: Initial Evidence-Limited Draft</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="notice">
+        <strong>样本范围说明：</strong>
+        已收到广告库链接，但当前环境无法读取 Meta 视频画面、字幕、时长与投放状态。因此，本页不能证明该广告具体使用了哪个 Hook 或镜头结构。产品机制部分来自 recteq 官方页面；视频拆解字段保留为待验证项。
+      </div>
+
+      <section class="metrics">
+        <article class="metric"><b>1</b><span>Meta Ad Library 样本</span></article>
+        <article class="metric"><b>4</b><span>官网可确认的机制方向</span></article>
+        <article class="metric"><b>0</b><span>已核验的视频镜头</span></article>
+        <article class="metric"><b>3</b><span>建议优先测试的 Angle</span></article>
+      </section>
+
+      <nav class="tabs" aria-label="Report sections">
+        <button class="is-active" data-tab="scope">样本口径</button>
+        <button data-tab="mechanism">产品机制</button>
+        <button data-tab="angles">Angle 优先级</button>
+        <button data-tab="teardown">视频拆解</button>
+        <button data-tab="plan">测试计划</button>
+        <button data-tab="sources">证据来源</button>
+      </nav>
+
+      <section id="scope" class="panel is-active">
+        <div class="grid two">
+          <article class="card">
+            <h2>Sample Scope</h2>
+            <table>
+              <tr><th>字段</th><th>当前结论</th></tr>
+              <tr><td>来源</td><td>Meta Ad Library 单条广告链接</td></tr>
+              <tr><td>品牌</td><td>recteq</td></tr>
+              <tr><td>产品</td><td>Pellet grill，具体型号待核验</td></tr>
+              <tr><td>视频画面</td><td>当前无法读取，需要上传视频文件或录屏</td></tr>
+              <tr><td>结论强度</td><td>可用于产品机制梳理和测试假设，不能视为完整广告拉片</td></tr>
+            </table>
+          </article>
+          <article class="card">
+            <h2>Product Type</h2>
+            <p><strong>High-consideration durable goods</strong></p>
+            <p>Pellet grill 属于高客单、长使用周期、购买前会对比参数与口碑的耐用品。冷流量素材不宜只堆参数，需要把功能翻译为可感知的使用结果。</p>
+            <div class="row">
+              <span class="pill confirmed">Confirmed: 品类</span>
+              <span class="pill assumption">Assumption: 美国户外烹饪人群</span>
+              <span class="pill validation">Needs Validation: 广告具体型号</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="mechanism" class="panel">
+        <article class="card">
+          <h2>Official Mechanism Signals</h2>
+          <table>
+            <thead><tr><th>机制</th><th>用户利益</th><th>适合展示的画面</th><th>证据状态</th></tr></thead>
+            <tbody>
+              <tr><td>更高温度范围</td><td>不仅能 low-and-slow，也能覆盖更高温烹饪场景</td><td>温控表、升温过程、食物表面效果</td><td><span class="pill confirmed">Confirmed</span></td></tr>
+              <tr><td>PID 温控</td><td>减少猜测和频繁调整，提升稳定性</td><td>设定温度、温度保持、长时间烹饪过程</td><td><span class="pill confirmed">Confirmed</span></td></tr>
+              <tr><td>不锈钢组件</td><td>强调长期使用价值和耐用感</td><td>开盖、烤架、火盆、滴油盘的近景</td><td><span class="pill confirmed">Confirmed</span></td></tr>
+              <tr><td>App / Wi-Fi</td><td>更方便地监控和控制烹饪过程</td><td>手机界面与 grill 同框</td><td><span class="pill confirmed">Confirmed</span></td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section id="angles" class="panel">
+        <article class="card">
+          <h2>Angle Fit Evaluation</h2>
+          <table>
+            <thead><tr><th>Angle</th><th>总分</th><th>判断</th><th>最佳 Funnel</th><th>下一步证据</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>More Control, Less Guesswork</strong><br>PID + App 控制</td>
+                <td class="score">27 / 30</td><td>Priority Test</td><td>TOF / MOF</td>
+                <td>App 操作录屏、温度保持演示、用户评价</td>
+              </tr>
+              <tr>
+                <td><strong>Built for Long-Term Ownership</strong><br>不锈钢与长期使用价值</td>
+                <td class="score">25 / 30</td><td>Priority Test</td><td>MOF / BOF</td>
+                <td>组件近景、具体型号保修页、长期用户评价</td>
+              </tr>
+              <tr>
+                <td><strong>More Heat, More Possibilities</strong><br>高温能力与多场景</td>
+                <td class="score">24 / 30</td><td>Priority Test</td><td>TOF / MOF</td>
+                <td>确认具体型号温度上限，避免跨型号泛化</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><small>评分是基于官网机制的初步判断，不代表该广告已经使用这些 Angle，也不代表任何一个 Angle 已经通过投放验证。</small></p>
+        </article>
+      </section>
+
+      <section id="teardown" class="panel">
+        <div class="grid two">
+          <article class="card">
+            <h2>Single Creative Teardown</h2>
+            <table>
+              <tr><th>字段</th><th>状态</th></tr>
+              <tr><td>视频长度</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>Format</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>Main Angle</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>Hook Type</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>Proof Type</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>CTA</td><td><span class="pill validation">Needs Validation</span></td></tr>
+              <tr><td>Estimated Funnel</td><td><span class="pill validation">Needs Validation</span></td></tr>
+            </table>
+          </article>
+          <article class="card">
+            <h2>补齐拉片需要什么？</h2>
+            <ul>
+              <li>直接上传广告视频文件，或提供一段包含完整广告的录屏。</li>
+              <li>如果方便，补充广告文案、CTA 和落地页截图。</li>
+              <li>如有后台数据，补充 spend、CTR、CPC、LPV、ATC、Purchase、CPA。</li>
+            </ul>
+            <p>补齐后可以判断这条广告究竟赢在 Hook、Proof、Offer，还是只适合做流量素材。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="plan" class="panel">
+        <article class="card">
+          <h2>First Testing Plan</h2>
+          <table>
+            <thead><tr><th>Priority</th><th>Creative Idea</th><th>Funnel</th><th>核心变量</th><th>Primary KPI</th><th>Kill / Scale 逻辑</th></tr></thead>
+            <tbody>
+              <tr><td>P1</td><td>设定温度后离开：App + PID 实操 Demo</td><td>TOF / MOF</td><td>Angle: More Control</td><td>Hook rate, CTR, ATC</td><td>弱停留则换 Hook；CTR 健康但 ATC 弱则查 PDP 承接</td></tr>
+              <tr><td>P1</td><td>开盖近景：不锈钢组件与日常使用</td><td>MOF</td><td>Proof: Detail Close-Up</td><td>CTR, VC, ATC</td><td>有购买信号后复制不同 creator 版本</td></tr>
+              <tr><td>P1</td><td>一台 pellet grill 能做什么：高温与多场景</td><td>TOF</td><td>Angle: More Heat</td><td>Thumbstop, CTR, LPV</td><td>先确认具体型号温度上限；点击高但 CVR 弱则检查意图匹配</td></tr>
+            </tbody>
+          </table>
+          <p><small>没有账户基准数据，因此不虚构统一数值阈值。Kill 和 Scale 应以账户历史平均值为参照。</small></p>
+        </article>
+      </section>
+
+      <section id="sources" class="panel">
+        <div class="grid two">
+          <article class="card source-list">
+            <h2>Primary Sources</h2>
+            <a href="https://www.facebook.com/ads/library/?id=988547844043415" target="_blank" rel="noreferrer">Meta Ad Library sample: ID 988547844043415</a>
+            <a href="https://www.recteq.com/" target="_blank" rel="noreferrer">recteq official website</a>
+            <a href="https://www.recteq.com/explore/our-grills" target="_blank" rel="noreferrer">recteq official product brochure</a>
+            <a href="https://www.recteq.com/products/patio-legend-400" target="_blank" rel="noreferrer">Official example PDP: Patio Legend 400</a>
+            <a href="https://www.recteq.com/products/rt-b380-wood-pellet-grill" target="_blank" rel="noreferrer">Official example PDP: RT-B380 Bullseye</a>
+          </article>
+          <article class="card">
+            <h2>Guardrails</h2>
+            <ul>
+              <li>不要把某一型号的最高温度泛化到全部型号。</li>
+              <li>不要在未确认具体型号前写死保修年限。</li>
+              <li>不要使用无法从官网、PDP 或真实演示支持的绝对化性能承诺。</li>
+              <li>烹饪与高温画面必须符合安全使用场景。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        Generated as an evidence-limited first draft on 2026-05-31. Upgrade the teardown after supplying the ad video file.
+      </footer>
+    </div>
+  </main>
+  <script>
+    const buttons = Array.from(document.querySelectorAll("[data-tab]"));
+    const panels = Array.from(document.querySelectorAll(".panel"));
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        buttons.forEach(item => item.classList.toggle("is-active", item === button));
+        panels.forEach(panel => panel.classList.toggle("is-active", panel.id === button.dataset.tab));
+      });
+    });
+  </script>
+</body>
+</html>
