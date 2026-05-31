@@ -5,137 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>recteq DualFire 1200 | Meta Creative Teardown</title>
   <style>
-    :root{--bg:#f5efe7;--paper:#fffdfa;--ink:#241d18;--muted:#76685d;--line:#dfd2c5;--red:#a23d29;--red2:#6e281b;--green:#38694c;--amber:#a96816;--blue:#315f79;--shadow:0 14px 36px rgba(70,47,34,.09)}
-    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(circle at 92% 0,rgba(162,61,41,.14),transparent 30rem),var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.65}a{color:var(--red2)}.wrap{max-width:1180px;margin:0 auto}
-    .hero{padding:62px 24px 42px;color:#fff9f3;background:linear-gradient(125deg,#291a14,#67291e 72%,#8c3825)}.eyebrow{margin-bottom:12px;color:#efc8b6;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}h1{max-width:900px;margin:0;font-size:clamp(38px,6vw,70px);line-height:1.03}.subtitle{max-width:860px;margin:18px 0 0;color:#f3d9ce;font-size:18px}.hero-meta,.row{display:flex;flex-wrap:wrap;gap:8px}.hero-meta{margin-top:25px}.hero-meta span,.pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800}.hero-meta span{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08)}
-    main{padding:28px 24px 70px}.notice{margin-bottom:20px;padding:15px 17px;border-left:4px solid var(--blue);border-radius:10px;color:#234f66;background:#e5f2f8}.metrics,.grid{display:grid;gap:16px}.metrics{grid-template-columns:repeat(4,1fr);margin:20px 0}.grid.two{grid-template-columns:repeat(2,1fr)}.metric,.card{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:var(--shadow)}.metric{padding:17px}.metric b{display:block;margin-bottom:3px;color:var(--red);font-size:25px}.metric span{color:var(--muted);font-size:13px}.card{padding:22px;margin-bottom:16px}h2{margin:0 0 13px;font-size:25px}h3{margin:0 0 8px;font-size:17px}p{margin:8px 0}ul{margin:9px 0 0;padding-left:20px}li{margin:6px 0}
-    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 16px}button{cursor:pointer;padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:#fffaf5;font-weight:800}button.is-active{border-color:var(--red);color:#fff;background:var(--red)}.panel{display:none}.panel.is-active{display:block}.pill.confirmed{color:#28583e;background:#dcefe3}.pill.assumption{color:#75490f;background:#ffecc2}.pill.validation{color:#315f79;background:#dceefa}.pill.priority{color:#fff;background:var(--red)}.row{margin-top:12px}
-    video,img{display:block;width:100%;border-radius:12px;background:#1d1815}.video-wrap{max-width:390px;margin:0 auto}.caption{margin-top:8px;color:var(--muted);font-size:12px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.score{color:var(--red);font-weight:900}.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.shots figure{margin:0}.shots figcaption{padding:6px 2px;color:var(--muted);font-size:12px}.source-list a{display:block;margin:8px 0}footer{padding-top:20px;color:var(--muted);font-size:12px}
-    @media(max-width:820px){.metrics,.grid.two,.shots{grid-template-columns:1fr 1fr}.hero{padding-top:44px}table{display:block;overflow-x:auto}}@media(max-width:520px){.metrics,.grid.two,.shots{grid-template-columns:1fr}}
+    :root{--bg:#f3f6f9;--paper:#fff;--ink:#17283b;--muted:#607287;--line:#d8e2ec;--blue:#1f6feb;--blue-soft:#eef5ff;--green:#197044;--green-soft:#e6f6ee;--amber:#8a5a14;--amber-soft:#fff4d8;--shadow:0 12px 32px rgba(35,63,92,.08)}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font-family:Inter,"Segoe UI","Microsoft YaHei",Arial,sans-serif;line-height:1.62}a{color:#145cc2;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1260px;margin:0 auto;padding:0 22px}
+    header{padding:32px 0 22px;background:#fff;border-bottom:1px solid var(--line)}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}h1{margin:7px 0 6px;font-size:clamp(30px,4vw,48px);line-height:1.1}.sub{max-width:850px;margin:0;color:var(--muted);font-size:15px}
+    main{padding:22px 0 58px}.layout{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}.card{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:var(--shadow)}.side{position:sticky;top:14px;padding:15px}.video{width:100%;border-radius:12px;background:#111;display:block}.tag-wrap{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.tag,.status{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700}.tag{color:#33516f;background:#f2f6fa;border:1px solid #d8e2ec}.confirmed{color:var(--green);background:var(--green-soft)}.assumption{color:var(--amber);background:var(--amber-soft)}.links{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}.links a{padding:7px 5px;border:1px solid #bdd4f4;border-radius:9px;text-align:center;font-size:12px;font-weight:700;background:#f8fbff}
+    .main-card{padding:20px}.meta-row{display:flex;justify-content:space-between;gap:12px;align-items:start}.label{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.judgment{margin:7px 0 15px;font-size:20px;font-weight:800;line-height:1.45}.chain{padding:11px 13px;border-radius:10px;color:#22518b;background:var(--blue-soft);font-weight:800}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 13px}button{cursor:pointer;padding:9px 13px;border:1px solid var(--line);border-radius:10px;color:#34516f;background:#fff;font-weight:800}button.active{border-color:#8bb8f5;color:#145cc2;background:var(--blue-soft)}.panel{display:none}.panel.active{display:block}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{padding:14px;border:1px solid var(--line);border-radius:12px;background:#fbfdff}.mini h3{margin:0 0 7px;font-size:15px}.mini p,.mini ul{margin:0;font-size:14px}.mini ul{padding-left:18px}.mini li{margin:4px 0}.note{margin-top:11px;padding:11px 13px;border-left:3px solid #d49a36;border-radius:8px;background:#fff9eb;color:#6f501b;font-size:14px}
+    table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:12px;text-transform:uppercase}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checklist{margin:0;padding-left:19px}.checklist li{margin:5px 0}.frames{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.frames figure{margin:0}.frames img{width:100%;border-radius:9px;display:block}.frames figcaption{padding-top:5px;color:var(--muted);font-size:12px}
+    details{margin-top:15px;border:1px solid var(--line);border-radius:12px;background:#fff}summary{cursor:pointer;padding:13px 15px;color:#31506f;font-weight:800}.details-body{padding:0 15px 15px}.evidence-block{margin-top:15px}.evidence-block h3{margin:0 0 8px;font-size:16px}.small{color:var(--muted);font-size:12px}.sources a{display:block;margin:5px 0}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static}.three,.frames{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.three,.two,.frames{grid-template-columns:1fr}.links{grid-template-columns:1fr}.judgment{font-size:18px}}
   </style>
 </head>
 <body>
-  <header class="hero"><div class="wrap">
-    <div class="eyebrow">Meta Creative Intelligence / Verified Single-Ad Teardown</div>
-    <h1>recteq DualFire 1200 Meta Creative Report</h1>
-    <p class="subtitle">Creator-led product demo：用双独立烹饪腔、旋钮操作、明火炙烤和牛排结果近景，把“smoke 与 sear 不必二选一”变成可见证据。</p>
-    <div class="hero-meta"><span>Brand: recteq</span><span>Product: DualFire 1200</span><span>Duration: 29.9s</span><span>Format: Vertical Creator Demo</span><span>Sample: Meta Ad Library ID 988547844043415</span></div>
+  <header><div class="wrap">
+    <div class="eyebrow">Verified Single-Ad Teardown</div>
+    <h1>recteq DualFire 1200</h1>
+    <p class="sub">Meta 创意拆解：这条素材如何把双腔结构、操作过程和明火结果转化为用户能快速理解的购买理由。</p>
   </div></header>
+
   <main><div class="wrap">
-    <div class="notice"><strong>证据边界：</strong>视频画面、时长和镜头结构已经根据用户提供的 MP4 核验。产品参数来自 recteq 官方 PDP。当前没有 Meta 后台投放数据，也没有对音频口播逐字转录，因此 CTA 和真实 performance 仍需结合广告卡片与账户数据确认。</div>
-    <section class="metrics">
-      <article class="metric"><b>29.9s</b><span>广告视频长度</span></article>
-      <article class="metric"><b>9:16</b><span>720 × 1280 竖屏格式</span></article>
-      <article class="metric"><b>MOF</b><span>最适合的主 Funnel</span></article>
-      <article class="metric"><b>27 / 30</b><span>Dual-chamber Angle Fit</span></article>
-    </section>
-    <nav class="tabs" aria-label="Report sections">
-      <button class="is-active" data-tab="overview">总览</button><button data-tab="timeline">时间轴</button><button data-tab="hook">前 3 秒</button><button data-tab="angles">Angle</button><button data-tab="plan">测试计划</button><button data-tab="pdp">PDP 承接</button><button data-tab="sources">证据来源</button>
-    </nav>
+    <div class="layout">
+      <aside class="card side">
+        <video class="video" controls preload="metadata" poster="assets/steak-result.jpg">
+          <source src="assets/recteq-dualfire-1200-meta-ad.mp4" type="video/mp4">
+        </video>
+        <div class="tag-wrap">
+          <span class="tag">29.9s</span><span class="tag">9:16</span><span class="tag">Creator Demo</span>
+          <span class="tag">Hook: Talking Head</span><span class="tag">MOF</span><span class="tag">CTA 待核验</span>
+        </div>
+        <div class="links">
+          <a href="https://www.facebook.com/ads/library/?id=988547844043415" target="_blank" rel="noreferrer">广告库</a>
+          <a href="assets/recteq-dualfire-1200-meta-ad.mp4" target="_blank">视频源</a>
+          <a href="https://www.recteq.com/products/rt-1200-dualfire" target="_blank" rel="noreferrer">落地页</a>
+        </div>
+      </aside>
 
-    <section id="overview" class="panel is-active">
-      <div class="grid two">
-        <article class="card"><h2>Original Creative</h2><div class="video-wrap"><video controls preload="metadata" poster="assets/steak-result.jpg"><source src="assets/recteq-dualfire-1200-meta-ad.mp4" type="video/mp4"></video></div><p class="caption">用户提供的 Meta 广告视频。点击播放可直接对照拆解。</p></article>
-        <article class="card"><h2>Quick Judgment</h2>
-          <p><strong>这是一条 MOF 偏强的 creator product demo。</strong> 它的核心不是情绪叙事，而是把 DualFire 1200 的产品差异直接演示出来：双腔、不同用途、旋钮操作、直火炙烤和最终牛排结果。</p>
-          <p><strong>最强部分：</strong>后半段火焰与牛排近景形成明确 proof，机制和结果连得起来。</p>
-          <p><strong>最大缺口：</strong>开头 0-3 秒较静态。真人已经出镜、产品也可见，但最有停留价值的火焰和成品直到后半段才出现。</p>
-          <div class="row"><span class="pill confirmed">Confirmed: DualFire 1200</span><span class="pill confirmed">Confirmed: Creator Demo</span><span class="pill confirmed">Confirmed: Product Proof</span><span class="pill validation">Needs Data: CPA / ROAS</span></div>
-        </article>
-      </div>
-      <article class="card"><h2>Tagging</h2><table>
-        <tr><th>维度</th><th>标签</th></tr><tr><td>命名</td><td><code>recteq_DualFire1200_MOF_CreatorDemo_Versatility_TalkingHead_30s_V1</code></td></tr>
-        <tr><td>Main Angle</td><td>Versatility / More Control / Better Result</td></tr><tr><td>Hook</td><td>Creator Talking Head + Product Visible Early</td></tr>
-        <tr><td>Proof</td><td>Dual-Chamber Demo / Controller Close-Up / Direct-Flame Demo / Food Result</td></tr><tr><td>CTA</td><td>视频内未出现明确 CTA；需核验广告卡片按钮</td></tr><tr><td>Funnel</td><td>MOF 主用；剪辑改造后可做 TOF</td></tr>
-      </table></article>
-    </section>
+      <section class="card main-card">
+        <div class="meta-row">
+          <div>
+            <div class="label">一句话判断</div>
+            <p class="judgment">这是一条适合 MOF 的真人演示：先解释双腔用途，再用操作、明火和牛排结果建立相信。最大机会不是重拍主体，而是把最强结果前置到开头。</p>
+          </div>
+          <span class="status confirmed">画面已核验</span>
+        </div>
+        <div class="chain">双腔差异 → 操作证明 → 明火炙烤 → 食物结果</div>
 
-    <section id="timeline" class="panel">
-      <article class="card"><h2>Creative Structure</h2><table>
-        <thead><tr><th>时间</th><th>画面</th><th>作用</th><th>判断</th></tr></thead><tbody>
-          <tr><td>0-4s</td><td>Creator 站在 grill 旁正面讲解，产品完整入镜</td><td>建立真人可信度与产品类别认知</td><td>清楚，但停留力有限</td></tr>
-          <tr><td>4-8s</td><td>镜头靠近控制区与双腔结构</td><td>进入产品机制解释</td><td>从 talking head 转为 demonstration</td></tr>
-          <tr><td>8-16s</td><td>打开大烹饪腔，展示多块肉与容量</td><td>证明聚会、家庭烹饪和 low-and-slow 使用场景</td><td>画面信息密度高</td></tr>
-          <tr><td>18-20s</td><td>旋钮特写，操作后灯环变化</td><td>让控制感可视化</td><td>可用于单独剪成 feature proof</td></tr>
-          <tr><td>22-29.9s</td><td>直火、火焰、牛排炙烤和成品近景</td><td>把高温能力转为强视觉结果</td><td>全片最适合做 TOF Hook 的素材</td></tr>
-        </tbody></table></article>
-      <article class="card"><h2>Full Visual Timeline</h2><img src="assets/full-timeline.jpg" alt="Full visual timeline of recteq DualFire 1200 ad"><p class="caption">每 2 秒抽取一帧。广告从 creator 讲解逐步转为双腔展示、旋钮操作和明火炙烤。</p></article>
-      <div class="shots">
-        <figure><img src="assets/controller.jpg" alt="Controller close-up"><figcaption>6s：控制区与双腔结构</figcaption></figure>
-        <figure><img src="assets/dual-chamber.jpg" alt="Dual chamber demo"><figcaption>10s：大烹饪腔容量 proof</figcaption></figure>
-        <figure><img src="assets/direct-flame.jpg" alt="Direct flame searing"><figcaption>24s：直火炙烤 proof</figcaption></figure>
-        <figure><img src="assets/steak-result.jpg" alt="Steak result close-up"><figcaption>28s：牛排结果近景</figcaption></figure>
-      </div>
-    </section>
+        <nav class="tabs" aria-label="分析切换">
+          <button class="active" data-tab="why">为什么它可能有效</button>
+          <button data-tab="shoot">具体怎么拍</button>
+          <button data-tab="borrow">我们怎么借鉴</button>
+        </nav>
 
-    <section id="hook" class="panel">
-      <div class="grid two">
-        <article class="card"><h2>First 0-3 Seconds</h2><img src="assets/hook-timeline.jpg" alt="First three seconds hook timeline"><p class="caption">0-3.5 秒，每 0.5 秒抽取一帧。</p></article>
-        <article class="card"><h2>Hook Diagnosis</h2>
-          <ul><li>产品在首帧出现，类别识别没有问题。</li><li>Creator talking head 提供真人感，但画面变化小。</li><li>没有先展示最强结果：火焰、牛排 close-up、双腔同时工作。</li><li>对于已经知道 pellet grill 的 MOF 用户，开头可以成立；对于冷流量，未必能最大化 thumbstop。</li></ul>
-          <h3>建议只改 Hook，保留后续主体</h3>
-          <ul><li><strong>Result First：</strong>先放 24-28s 火焰与牛排，再切回 creator。</li><li><strong>Comparison Hook：</strong>首帧双腔同框，字幕表达 smoke on one side, sear on the other。</li><li><strong>Question Hook：</strong>用一个 pellet grill 同时 slow-cook 和 sear，画面立即给出答案。</li></ul>
-        </article>
-      </div>
-    </section>
+        <div id="why" class="panel active">
+          <div class="three">
+            <article class="mini">
+              <h3>抓住注意力</h3>
+              <p>产品首帧可见，真人出镜降低距离感。但 0-3 秒画面变化较少，更适合已有品类认知的用户。</p>
+            </article>
+            <article class="mini">
+              <h3>建立相信</h3>
+              <p>双腔展示、旋钮操作、直火和食物结果形成连续 Proof，不只是口头解释参数。</p>
+            </article>
+            <article class="mini">
+              <h3>促成行动</h3>
+              <p>核心购买理由清楚：一个产品覆盖不同烹饪任务。CTA 需要结合广告卡片进一步核验。</p>
+            </article>
+          </div>
+          <div class="note"><strong>留存假设：</strong>后半段火焰和牛排是全片最强视觉。将其前置，可能提升冷流量 Thumbstop；没有后台数据前，不视为已验证结论。</div>
+        </div>
 
-    <section id="angles" class="panel">
-      <article class="card"><h2>Angle Fit Evaluation</h2><table>
-        <thead><tr><th>Angle</th><th>分数</th><th>判断</th><th>视频证据</th><th>最佳 Funnel</th></tr></thead><tbody>
-          <tr><td><strong>Smoke and Sear Without Compromise</strong><br>双腔 versatility</td><td class="score">27 / 30</td><td><span class="pill priority">Priority Test</span></td><td>双腔展示 + 明火牛排</td><td>TOF / MOF</td></tr>
-          <tr><td><strong>More Control, Less Guesswork</strong><br>独立控制与 PID</td><td class="score">25 / 30</td><td><span class="pill priority">Priority Test</span></td><td>旋钮操作；PDP 支撑 PID</td><td>MOF</td></tr>
-          <tr><td><strong>Cook for a Crowd</strong><br>容量与场景</td><td class="score">23 / 30</td><td>Small Budget Test</td><td>大烹饪腔内多块肉</td><td>TOF / MOF</td></tr>
-          <tr><td><strong>Built for Long-Term Ownership</strong><br>材质与长期价值</td><td class="score">22 / 30</td><td>Small Budget Test</td><td>本视频证据较弱；需补组件 close-up</td><td>MOF / BOF</td></tr>
-        </tbody></table></article>
-      <article class="card"><h2>Why It May Work</h2><ul>
-        <li><strong>购买动机：</strong>用户不必在 smoker 与 high-heat grill 之间选择，也不必维护两台设备。</li>
-        <li><strong>相信理由：</strong>视频不是只说参数，而是展示双腔、操作过程、直火和食物结果。</li>
-        <li><strong>Meta 适配：</strong>火焰、牛排和开盖 reveal 都有很强的视觉表达能力。</li>
-        <li><strong>限制：</strong>只有一条样本，没有投放数据，不能直接证明该 Angle 已经 scale。</li>
-      </ul></article>
-    </section>
+        <div id="shoot" class="panel">
+          <div class="label">拍摄目标</div>
+          <p class="judgment">让用户先看懂结果，再用双腔操作解释为什么产品能做到。</p>
+          <table>
+            <thead><tr><th>时间</th><th>内容</th><th>任务</th></tr></thead>
+            <tbody>
+              <tr><td>0-3s</td><td>明火与食物结果近景</td><td>Stop scroll</td></tr>
+              <tr><td>3-8s</td><td>双腔同框，说明不同用途</td><td>解释差异</td></tr>
+              <tr><td>8-18s</td><td>开盖、旋钮与实际操作</td><td>提供 Proof</td></tr>
+              <tr><td>18-30s</td><td>结果回收、产品全景、CTA</td><td>推动下一步</td></tr>
+            </tbody>
+          </table>
+          <div class="two">
+            <article class="mini">
+              <h3>必须拍到</h3>
+              <ul class="checklist"><li>双腔同框</li><li>旋钮操作</li><li>直火炙烤</li><li>成品近景</li><li>产品全景</li></ul>
+            </article>
+            <article class="mini">
+              <h3>剪辑要求</h3>
+              <ul class="checklist"><li>竖屏 9:16</li><li>前 3 秒先给结果</li><li>静音也能看懂</li><li>一个视频只讲一个主轴</li></ul>
+            </article>
+          </div>
+        </div>
 
-    <section id="plan" class="panel">
-      <article class="card"><h2>Next Testing Matrix</h2><p>第一轮只改变 Hook，复用本条视频主体，才能判断停留提升是否来自开头。</p><table>
-        <thead><tr><th>版本</th><th>唯一核心变化</th><th>开头</th><th>Funnel</th><th>Primary KPI</th><th>Kill / Scale Rule</th></tr></thead><tbody>
-          <tr><td>V1 Control</td><td>原版</td><td>Creator talking head</td><td>MOF</td><td>Hook rate, CTR, ATC</td><td>作为基准</td></tr>
-          <tr><td>V2 Result First</td><td>Hook</td><td>24-28s 火焰 + 牛排 close-up</td><td>TOF</td><td>Thumbstop, 3s view, CTR</td><td>停留提升且 LPV 质量稳定则放大</td></tr>
-          <tr><td>V3 Dual Chamber</td><td>Hook</td><td>双腔同框 + smoke / sear 表达</td><td>TOF / MOF</td><td>Hook rate, CTR, ATC</td><td>CTR 高但 ATC 弱则检查意图与 PDP 首屏</td></tr>
-          <tr><td>V4 Controller Proof</td><td>Proof emphasis</td><td>旋钮操作 + 双侧控制</td><td>MOF</td><td>CTR, VC, ATC</td><td>适合 retargeting 与 feature education</td></tr>
-        </tbody></table>
-        <p class="caption">没有账户基准，因此不虚构统一数值阈值。以账户历史平均值判断 kill 和 scale，并在预算增加 20-30% 后复查效率。</p>
-      </article>
-    </section>
+        <div id="borrow" class="panel">
+          <div class="two">
+            <article class="mini">
+              <h3>值得借</h3>
+              <ul class="checklist"><li>用真实操作证明机制</li><li>用结果近景收口</li><li>让功能表达服务于一个购买理由</li></ul>
+            </article>
+            <article class="mini">
+              <h3>不要照抄</h3>
+              <ul class="checklist"><li>不要把单一型号能力泛化到全部产品</li><li>不要添加画面未证明的功能承诺</li><li>没有数据时，不宣称素材已 Scale</li></ul>
+            </article>
+          </div>
+          <h3>下一轮：只测试 Hook</h3>
+          <table>
+            <thead><tr><th>版本</th><th>唯一变化</th><th>开头</th><th>目的</th><th>Primary KPI</th></tr></thead>
+            <tbody>
+              <tr><td>V1</td><td>Control</td><td>原版真人讲解</td><td>建立基准</td><td>3s View, CTR, ATC</td></tr>
+              <tr><td>V2</td><td>Hook</td><td>明火与成品近景</td><td>测试停留</td><td>Thumbstop, CTR</td></tr>
+              <tr><td>V3</td><td>Hook</td><td>双腔同框</td><td>测试差异理解</td><td>CTR, ATC</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <section id="pdp" class="panel">
-      <article class="card"><h2>PDP Match</h2><table>
-        <thead><tr><th>广告表达</th><th>PDP 支撑</th><th>状态</th><th>建议</th></tr></thead><tbody>
-          <tr><td>双独立烹饪腔</td><td>官方 PDP 明确说明一侧 low-and-slow，一侧 high-heat grilling</td><td><span class="pill confirmed">Strong</span></td><td>首屏继续强化 smoke + sear 的直观图像</td></tr>
-          <tr><td>高温炙烤</td><td>官方 PDP 给出 180°F-700°F</td><td><span class="pill confirmed">Strong</span></td><td>广告字幕可明确写 700°F，但只用于 DualFire 1200</td></tr>
-          <tr><td>独立控制</td><td>官方 FAQ 说明两个腔体可独立使用，各有控制</td><td><span class="pill confirmed">Strong</span></td><td>补充双侧不同温度同屏 proof</td></tr>
-          <tr><td>大容量</td><td>官方 PDP 给出 1,208 sq. in. 与 70-lb hopper</td><td><span class="pill confirmed">Strong</span></td><td>测试家庭聚会或多人烹饪 Angle</td></tr>
-        </tbody></table>
-      </article>
-    </section>
-
-    <section id="sources" class="panel">
-      <div class="grid two">
-        <article class="card source-list"><h2>Primary Sources</h2>
-          <a href="https://www.facebook.com/ads/library/?id=988547844043415" target="_blank" rel="noreferrer">Meta Ad Library sample: ID 988547844043415</a>
-          <a href="https://www.recteq.com/products/rt-1200-dualfire" target="_blank" rel="noreferrer">recteq official PDP: DualFire 1200</a>
-          <a href="https://www.recteq.com/explore/our-grills/dual-chamber" target="_blank" rel="noreferrer">recteq official dual-chamber collection</a>
-          <a href="https://www.recteq.com/" target="_blank" rel="noreferrer">recteq official website</a>
-        </article>
-        <article class="card"><h2>Guardrails</h2><ul>
-          <li>不要把 DualFire 1200 的 700°F、双腔或容量泛化到全部 recteq 型号。</li><li>本视频适合证明 smoke + sear versatility，不宜额外添加未展示的 App 使用承诺。</li><li>高温与明火画面需要保持真实、安全的使用场景。</li><li>没有后台数据时，不宣称该广告已经 scale。</li>
-        </ul></article>
-      </div>
-    </section>
-    <footer>Updated from the supplied MP4 on 2026-05-31. Visual teardown verified; performance conclusions require ad-account data.</footer>
+        <details>
+          <summary>查看证据与时间轴</summary>
+          <div class="details-body">
+            <section class="evidence-block">
+              <h3>关键帧</h3>
+              <div class="frames">
+                <figure><img src="assets/controller.jpg" alt="控制区与双腔"><figcaption>6s：控制区与双腔。产品差异开始变得具体。</figcaption></figure>
+                <figure><img src="assets/dual-chamber.jpg" alt="开盖展示容量"><figcaption>10s：开盖展示。把容量和使用场景可视化。</figcaption></figure>
+                <figure><img src="assets/direct-flame.jpg" alt="明火炙烤"><figcaption>24s：明火炙烤。将高温能力转成视觉 Proof。</figcaption></figure>
+                <figure><img src="assets/steak-result.jpg" alt="牛排结果"><figcaption>28s：食物结果。最适合测试 Result First Hook。</figcaption></figure>
+              </div>
+            </section>
+            <section class="evidence-block">
+              <h3>分秒拉片</h3>
+              <table>
+                <thead><tr><th>时间</th><th>功能段</th><th>画面</th><th>为什么重要</th></tr></thead>
+                <tbody>
+                  <tr><td>0-4s</td><td>Hook</td><td>真人站在产品旁讲解</td><td>类别清楚，但冷流量停留力有限</td></tr>
+                  <tr><td>4-8s</td><td>Mechanism</td><td>镜头靠近控制区与双腔</td><td>进入差异解释</td></tr>
+                  <tr><td>8-16s</td><td>Proof</td><td>开盖展示食物与容量</td><td>证明真实使用场景</td></tr>
+                  <tr><td>18-20s</td><td>Proof</td><td>旋钮操作特写</td><td>让控制感可视化</td></tr>
+                  <tr><td>22-29.9s</td><td>Result</td><td>明火、炙烤与食物近景</td><td>全片最强视觉结果</td></tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="evidence-block">
+              <h3>PDP 承接</h3>
+              <table>
+                <thead><tr><th>广告表达</th><th>官方页面支持</th><th>建议</th></tr></thead>
+                <tbody>
+                  <tr><td>双独立烹饪腔</td><td>官方 PDP 支持</td><td>首屏继续强化双腔差异</td></tr>
+                  <tr><td>高温炙烤</td><td>官方 PDP 给出 180°F-700°F</td><td>只用于 DualFire 1200，不泛化到其他型号</td></tr>
+                  <tr><td>容量</td><td>官方 PDP 给出 1,208 sq. in. 与 70-lb hopper</td><td>可作为后续场景测试，不必塞进当前视频</td></tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="evidence-block sources">
+              <h3>来源</h3>
+              <a href="https://www.facebook.com/ads/library/?id=988547844043415" target="_blank" rel="noreferrer">Meta Ad Library：ID 988547844043415</a>
+              <a href="https://www.recteq.com/products/rt-1200-dualfire" target="_blank" rel="noreferrer">recteq 官方 PDP：DualFire 1200</a>
+              <p class="small">视频画面与时长已根据用户提供的 MP4 核验。当前未提供账户表现数据，也未进行逐字口播转录。</p>
+            </section>
+          </div>
+        </details>
+      </section>
+    </div>
   </div></main>
   <script>
-    const buttons=Array.from(document.querySelectorAll("[data-tab]"));const panels=Array.from(document.querySelectorAll(".panel"));
-    buttons.forEach(button=>button.addEventListener("click",()=>{buttons.forEach(item=>item.classList.toggle("is-active",item===button));panels.forEach(panel=>panel.classList.toggle("is-active",panel.id===button.dataset.tab))}));
+    const buttons=[...document.querySelectorAll("[data-tab]")];
+    const panels=[...document.querySelectorAll(".panel")];
+    buttons.forEach(button=>button.addEventListener("click",()=>{
+      buttons.forEach(item=>item.classList.toggle("active",item===button));
+      panels.forEach(panel=>panel.classList.toggle("active",panel.id===button.dataset.tab));
+    }));
   </script>
 </body>
 </html>
